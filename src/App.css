@@ -51,6 +51,7 @@ body {
     rgba(233, 233, 233, 1) 66%,
     rgba(231, 231, 231, 1) 100%
   );
+  border-bottom: 1px solid #abaaaa;
 }
 
 .first-symbol::before {
@@ -122,6 +123,7 @@ li {
   align-items: center;
   grid-template-rows: 1fr 1fr;
   height: 100svh;
+  background-color: #eeeeee;
 }
 
 .under-header-texts > * {
@@ -143,4 +145,20 @@ li {
 .under-header > * {
   margin: 0;
   padding: 0;
+}
+
+.blue {
+  color: #3f71da;
+}
+
+.subtext {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  line-height: 1.5rem;
+  letter-spacing: 0.07rem;
+}
+
+.orange {
+  color: #D07913;
 }
