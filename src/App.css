@@ -52,12 +52,14 @@ body {
     rgba(231, 231, 231, 1) 100%
   );
   border-bottom: 1px solid #abaaaa;
+  position: fixed;
+  z-index: 99;
 }
 
 .first-symbol::before {
   font-family: "Kablammo";
   content: "{ ";
-    color: #3f71da;
+  color: #3f71da;
 }
 
 .second-symbol::before {
@@ -85,7 +87,6 @@ body {
   align-self: center;
   letter-spacing: 0.1rem;
 }
-
 
 .header > ul > li:hover {
   cursor: pointer;
@@ -160,5 +161,10 @@ li {
 }
 
 .orange {
-  color: #D07913;
+  color: #d07913;
+}
+
+.carousel-container {
+  height: 100svh;
+  position: relative;
 }
