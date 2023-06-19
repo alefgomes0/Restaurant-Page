@@ -28,6 +28,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .page-wrapper {
@@ -153,7 +154,7 @@ li {
 }
 
 .subtext {
-  width: 50%;
+  width: 40%;
   justify-self: center;
   align-self: center;
   line-height: 1.5rem;
@@ -169,32 +170,47 @@ li {
   position: relative;
 }
 
-.left-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 80px;
-  color: #fff;
-  opacity: 0.6;
-  cursor: pointer;
-  z-index: 1;
-}
-
+.left-arrow,
 .right-arrow {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  right: 32px;
   font-size: 80px;
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: pointer;
   z-index: 1;
+  background-color: #8b8989;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
 }
 
 .left-arrow:hover,
 .right-arrow:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   transition: 0.2s ease-in-out;
+  background-color: #696666;
 }
+
+.circles-container {
+  display: flex;
+  width: 100%;
+  font-size: 30px;
+  position: absolute;
+  transform: translate(0, -100%);
+  justify-content: center;
+  justify-items: center;
+}
+
+.circles-container > div {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+

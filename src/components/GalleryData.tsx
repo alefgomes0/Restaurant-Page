@@ -13,15 +13,15 @@ export const GalleryData: Gallery = [
     id: 0,
   },
   {
-    url: "D:/repos/restaurant-page/src/assets/images/sandra-wei-JZ3uB5FMYqs-unsplash",
+    url: "https://images.unsplash.com/photo-1630175914039-69ffca8a0604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     alt: "Guisado",
     attribution: "https://unsplash.com/pt-br/fotografias/JZ3uB5FMYqs",
     id: 1,
   },
   {
-    url: "D:/repos/restaurant-page/src/assets/images/farhad-ibrahimzade-ug4TZGjzFeY-unsplash",
-    alt: "Sushi",
-    attribution: "https://unsplash.com/pt-br/fotografias/ug4TZGjzFeY",
+    url: "https://images.unsplash.com/photo-1569172131007-4954763443d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80",
+    alt: "Shrimp",
+    attribution: "https://unsplash.com/pt-br/fotografias/HnJJsRihlQw",
     id: 2,
   },
   {
