@@ -122,7 +122,7 @@ li {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   height: 100svh;
   background-color: #eeeeee;
 }
@@ -167,4 +167,34 @@ li {
 .carousel-container {
   height: 100svh;
   position: relative;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 80px;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 80px;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  opacity: 0.9;
+  transition: 0.2s ease-in-out;
 }

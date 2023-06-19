@@ -26,6 +26,8 @@ export const Carousel = (props: GalleryProps) => {
   return (
     <div className="carousel-container">
       <div className="carousel" style={carouselStyles}></div>
+      <p className="left-arrow">&#8678;</p>
+      <p className="right-arrow">&#8680;</p>
     </div>
     
   );
