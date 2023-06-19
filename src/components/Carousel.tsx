@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type GalleryProps = {
   data: {
@@ -29,6 +29,17 @@ export const Carousel = (props: GalleryProps) => {
     setIndex(someIndex);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % numberOfImages);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [index, numberOfImages]);
+
+
   return (
     <section aria-label="restaurant-photos">
       <div className="carousel-container">
@@ -39,7 +50,7 @@ export const Carousel = (props: GalleryProps) => {
                 key={slide.id}
                 className={index === slideIndex ? "slide show" : "slide"}
               >
-                <img src={slide.url} alt={slide.alt} />
+                <img src={process.env.PUBLIC_URL + slide.url} alt={slide.alt} />
               </li>
             );
           })}
@@ -50,6 +61,14 @@ export const Carousel = (props: GalleryProps) => {
         <div className="right-arrow" onClick={handleRightArrowClick}>
           ⇨
         </div>
+        
+        <div className="circles-container">
+          {props.data.map((circle, circleIndex) => {
+            return <div onClick={() => handleCircledClick(circleIndex)}>{index === circleIndex ? "⬤" : "○"}</div>
+          })}
+        </div>
+        
+
       </div>
     </section>
   );
