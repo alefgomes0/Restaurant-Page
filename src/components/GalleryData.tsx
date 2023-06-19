@@ -7,15 +7,15 @@ type Gallery = {
 
 export const GalleryData: Gallery = [
   {
-    url: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    url: "https://images.unsplash.com/photo-1593189229346-9b7365e09777?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     alt: "Fish with sauce",
-    attribution: "https://unsplash.com/pt-br/fotografias/jpkfc5_d-DI",
+    attribution: "https://unsplash.com/pt-br/fotografias/Xd5F5tEN_0w",
     id: 0,
   },
   {
-    url: "https://images.unsplash.com/photo-1630175914039-69ffca8a0604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    url: "https://images.unsplash.com/photo-1565511224465-3948cfdd6d2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     alt: "Guisado",
-    attribution: "https://unsplash.com/pt-br/fotografias/JZ3uB5FMYqs",
+    attribution: "https://unsplash.com/pt-br/fotografias/jHqxMeDRsSY",
     id: 1,
   },
   {
