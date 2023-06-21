@@ -11,33 +11,64 @@ type GalleryProps = {
 
 export const Carousel = (props: GalleryProps) => {
   const [index, setIndex] = useState(0);
+  const [timerActive, setTimerActive] = useState(true);
   const numberOfImages = props.data.length;
 
   const handleRightArrowClick = () => {
     if (index + 1 === numberOfImages) {
       setIndex(0);
-    } else setIndex((prevIndex) => prevIndex + 1);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+    setTimerActive(true); 
   };
 
   const handleLeftArrowClick = () => {
     if (index === 0) {
       setIndex(numberOfImages - 1);
-    } else setIndex((prevIndex) => prevIndex - 1);
+    } else {
+      setIndex((prevIndex) => prevIndex - 1);
+    }
+    setTimerActive(true); 
   };
 
   const handleCircledClick = (someIndex: number) => {
     setIndex(someIndex);
+    setTimerActive(true); 
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % numberOfImages);
-    }, 5000);
+    let interval: NodeJS.Timer | null = null;
+
+    if (timerActive) {
+      interval = setInterval(() => {
+        handleRightArrowClick();
+      }, 5000);
+    }
 
     return () => {
-      clearTimeout(timer);
+      if (interval) {
+        clearInterval(interval);
+      }
     };
-  }, [index, numberOfImages]);
+  }, [index, timerActive]);
+
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        handleRightArrowClick();
+      } else if (event.key === "ArrowLeft") {
+        handleLeftArrowClick();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [index]);
 
 
   return (
@@ -50,7 +81,7 @@ export const Carousel = (props: GalleryProps) => {
                 key={slide.id}
                 className={index === slideIndex ? "slide show" : "slide"}
               >
-                <img src={process.env.PUBLIC_URL + slide.url} alt={slide.alt} />
+                <img src={process.env.PUBLIC_URL + slide.url} alt={slide.alt} key={slide.id} />
               </li>
             );
           })}
@@ -61,14 +92,16 @@ export const Carousel = (props: GalleryProps) => {
         <div className="right-arrow" onClick={handleRightArrowClick}>
           ⇨
         </div>
-        
+
         <div className="circles-container">
           {props.data.map((circle, circleIndex) => {
-            return <div onClick={() => handleCircledClick(circleIndex)}>{index === circleIndex ? "⬤" : "○"}</div>
+            return (
+              <div onClick={() => handleCircledClick(circleIndex)} key={circleIndex}>
+                {index === circleIndex ? "⬤" : "○"}
+              </div>
+            );
           })}
         </div>
-        
-
       </div>
     </section>
   );

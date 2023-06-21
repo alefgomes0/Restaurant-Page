@@ -102,16 +102,27 @@ body {
   justify-self: end;
   align-self: end;
   margin-left: 10px;
-  background-color: #3f71da;
-  color: #fff;
+  background: rgb(49, 94, 190);
+  background: linear-gradient(
+    180deg,
+    rgba(49, 94, 190, 1) 0%,
+    rgba(46, 95, 199, 1) 25%,
+    rgba(31, 80, 183, 1) 50%,
+    rgba(31, 80, 183, 1) 75%,
+    rgba(24, 74, 181, 1) 89%,
+    rgba(10, 64, 177, 1) 100%
+  );
+  color: #ffffff;
   cursor: pointer;
   border-radius: 3px;
   font-size: 17px;
+  opacity: 0.8;
+  box-shadow: 1.5px 3px 3px 1px rgba(26, 25, 25, 0.5), -0.5px -0.5px 1px rgb(26, 25, 25, 0.1);
 }
 
 .header > button:hover {
-  background-color: #1959e2;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s opacity ease-in-out;
+  opacity: 1;
 }
 
 li {
@@ -168,7 +179,7 @@ li {
 .carousel-container {
   display: grid;
   grid-template-rows: 1fr auto;
-  height: 100svh;
+  height: 95svh;
   position: relative;
 }
 
@@ -253,5 +264,3 @@ li {
   margin: 0 6px;
   cursor: pointer;
 }
-
-
