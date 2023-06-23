@@ -57,12 +57,22 @@ body {
   z-index: 99;
 }
 
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:visited {
+  color: #3f71da;
+}
+
+a.active {
+  color: #d07913;
+  font-weight: bold;
+}
+
+a.active:hover {
+  text-decoration: none;
 }
 
 .first-symbol::before {
@@ -97,7 +107,7 @@ a:hover {
   letter-spacing: 0.1rem;
 }
 
-.header > ul > li:hover {
+li > a:hover {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: #3f71da;

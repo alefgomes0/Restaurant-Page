@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -8,9 +8,15 @@ export const Header = () => {
         <span className="second-symbol"></span>
       </h2>
       <ul>
-        <Link to="/"><li>HOME</li></Link>
-        <Link to="/menu"><li>MENU</li></Link>
-        <Link to="/contact"><li>CONTACT</li></Link>
+        <li>
+          <NavLink to="/">HOME</NavLink>
+        </li>
+        <li>
+          <NavLink to="/menu">MENU</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">CONTACT</NavLink>
+        </li>
       </ul>
       <button>Reservation</button>
     </div>

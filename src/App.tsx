@@ -1,13 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header"
+import { Header } from "./components/Header";
 import { HomeContent } from "./components/HomeContent";
 import { ContactContent } from "./components/ContactContent";
-import './App.css';
+import "./App.css";
 
 const App = () => {
-
   return (
-    <div className='page-wrapper'>
+    <div className="page-wrapper">
       <Header />
       <Routes>
         <Route path="/" element={<HomeContent />} />
@@ -15,6 +14,6 @@ const App = () => {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
