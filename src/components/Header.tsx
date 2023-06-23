@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   return (
     <div className="header">
@@ -6,9 +8,9 @@ export const Header = () => {
         <span className="second-symbol"></span>
       </h2>
       <ul>
-        <li>HOME</li>
-        <li>MENU</li>
-        <li>ABOUT</li>
+        <Link to="/"><li>HOME</li></Link>
+        <Link to="/menu"><li>MENU</li></Link>
+        <Link to="/contact"><li>CONTACT</li></Link>
       </ul>
       <button>Reservation</button>
     </div>

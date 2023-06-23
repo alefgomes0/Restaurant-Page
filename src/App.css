@@ -57,6 +57,14 @@ body {
   z-index: 99;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .first-symbol::before {
   font-family: "Kablammo";
   content: "{ ";
@@ -117,7 +125,7 @@ body {
   border-radius: 3px;
   font-size: 17px;
   opacity: 0.8;
-  box-shadow: 1.5px 3px 3px 1px rgba(26, 25, 25, 0.5), -0.5px -0.5px 1px rgb(26, 25, 25, 0.1);
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
 }
 
 .header > button:hover {
@@ -263,4 +271,11 @@ li {
 .circles-container > div {
   margin: 0 6px;
   cursor: pointer;
+}
+
+.contact-content {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100svh;
 }

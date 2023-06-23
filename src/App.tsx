@@ -1,18 +1,18 @@
-import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header"
-import { UnderHeader } from './components/UnderHeader';
-import { Carousel } from './components/Carousel';
-import { GalleryData } from './components/GalleryData';
+import { HomeContent } from "./components/HomeContent";
+import { ContactContent } from "./components/ContactContent";
 import './App.css';
 
 const App = () => {
-  const galleryData= GalleryData.slice();
 
   return (
     <div className='page-wrapper'>
       <Header />
-      <UnderHeader />
-      <Carousel data={galleryData} />
+      <Routes>
+        <Route path="/" element={<HomeContent />} />
+        <Route path="contact" element={<ContactContent />} />
+      </Routes>
     </div>
   );
 }
