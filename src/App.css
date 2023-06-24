@@ -43,7 +43,7 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 2fr 1fr;
-  padding: 10px 20px;
+  padding: 10px 1%;
   background: rgb(240, 240, 240);
   background: linear-gradient(
     270deg,
@@ -283,9 +283,22 @@ li {
   cursor: pointer;
 }
 
-.contact-content {
+.contact-content,
+.menu {
   display: grid;
   align-content: center;
   justify-content: center;
   height: 100svh;
+}
+
+.no-match {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100svh;
+}
+
+.no-match > h3 {
+  font-size: 50px;
+  color: #ff2121;
 }

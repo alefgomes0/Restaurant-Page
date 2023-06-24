@@ -9,13 +9,13 @@ export const Header = () => {
       </h2>
       <ul>
         <li>
-          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/menu">MENU</NavLink>
+          <NavLink to="/menu">Menu</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">CONTACT</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
       <button>Reservation</button>
