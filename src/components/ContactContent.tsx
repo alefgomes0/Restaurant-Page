@@ -3,9 +3,9 @@ export const ContactContent = () => {
     <div className="contact-content">
       <form>
         <div className="contact-text">
-          <h5>Do you have any critic or suggestion?</h5>
-          <h5>Are you interested in working with us?</h5>
-          <h5>Send a message below!</h5>
+          <h4>Do you have any critic or suggestion?</h4>
+          <h4>Are you interested in working with us?</h4>
+          <h4>Send a message below!</h4>
         </div>
         <div className="field">
           <label>Name</label>

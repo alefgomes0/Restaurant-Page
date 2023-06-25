@@ -44,14 +44,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 2fr 1fr;
   padding: 10px 1%;
-  background: rgb(240, 240, 240);
-  background: linear-gradient(
-    270deg,
-    rgba(240, 240, 240, 1) 0%,
-    rgba(236, 236, 236, 1) 33%,
-    rgba(233, 233, 233, 1) 66%,
-    rgba(231, 231, 231, 1) 100%
-  );
+  background-color: #fff;
   border-bottom: 1px solid #abaaaa;
   position: fixed;
   z-index: 99;
@@ -156,7 +149,19 @@ li {
   align-items: center;
   grid-template-rows: 1fr;
   height: 100svh;
-  background-color: #ffffff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 247, 248, 1) 13%,
+    rgba(243, 245, 247, 1) 25%,
+    rgba(241, 243, 245, 1) 39%,
+    rgba(239, 243, 251, 1) 50%,
+    rgba(230, 231, 233, 1) 62%,
+    rgba(226, 227, 231, 1) 72%,
+    rgba(222, 224, 229, 1) 88%,
+    rgba(203, 206, 210, 1) 100%
+  );
 }
 
 .under-header-texts > * {
@@ -194,6 +199,7 @@ li {
 
 .orange {
   color: #d07913;
+  font-weight: 600;
 }
 
 .carousel-container {
@@ -295,20 +301,27 @@ li {
 }
 
 form {
-  background: rgb(246, 247, 250);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgba(246, 247, 250, 1) 0%,
-    rgba(209, 213, 222, 1) 25%,
-    rgba(205, 209, 218, 1) 50%,
-    rgba(193, 198, 209, 1) 75%,
-    rgba(189, 195, 208, 1) 89%,
-    rgba(168, 178, 197, 1) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 247, 248, 1) 13%,
+    rgba(243, 245, 247, 1) 25%,
+    rgba(241, 243, 245, 1) 39%,
+    rgba(239, 243, 251, 1) 50%,
+    rgba(230, 231, 233, 1) 62%,
+    rgba(226, 227, 231, 1) 72%,
+    rgba(222, 224, 229, 1) 88%,
+    rgba(203, 206, 210, 1) 100%
   );
   display: grid;
   padding: 10px 40px;
   border-radius: 6px;
-  box-shadow: 4px 6px 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-text > * {
+  opacity: 0.85;
 }
 
 .field {
@@ -317,10 +330,20 @@ form {
   gap: 4px;
 }
 
+.field > label {
+  font-weight: 600;
+}
+
 .field > input,
 .field > textarea {
   margin-bottom: 25px;
   background-color: #fff;
+}
+
+.field > input:focus,
+.field > textarea:focus {
+  border: none;
+  outline: 3px solid #637eb8;
 }
 
 form > button {
