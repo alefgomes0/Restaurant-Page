@@ -98,6 +98,7 @@ a.active:hover {
   justify-self: start;
   justify-content: start;
   justify-items: start;
+  font-size: 18px;
 }
 
 .header > h2 {
@@ -105,6 +106,7 @@ a.active:hover {
   font-weight: 700;
   align-self: center;
   letter-spacing: 0.1rem;
+  font-size: 30px;
 }
 
 li > a:hover {
@@ -154,7 +156,7 @@ li {
   align-items: center;
   grid-template-rows: 1fr;
   height: 100svh;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .under-header-texts > * {
@@ -288,7 +290,64 @@ li {
   display: grid;
   align-content: center;
   justify-content: center;
+  justify-items: center;
   height: 100svh;
+}
+
+form {
+  background: rgb(246, 247, 250);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 247, 250, 1) 0%,
+    rgba(209, 213, 222, 1) 25%,
+    rgba(205, 209, 218, 1) 50%,
+    rgba(193, 198, 209, 1) 75%,
+    rgba(189, 195, 208, 1) 89%,
+    rgba(168, 178, 197, 1) 100%
+  );
+  display: grid;
+  padding: 10px 40px;
+  border-radius: 6px;
+  box-shadow: 4px 6px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field > input,
+.field > textarea {
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+
+form > button {
+  width: 100%;
+  height: 2rem;
+  justify-self: center;
+  background: rgb(49, 94, 190);
+  background: linear-gradient(
+    180deg,
+    rgba(49, 94, 190, 1) 0%,
+    rgba(46, 95, 199, 1) 25%,
+    rgba(31, 80, 183, 1) 50%,
+    rgba(31, 80, 183, 1) 75%,
+    rgba(24, 74, 181, 1) 89%,
+    rgba(10, 64, 177, 1) 100%
+  );
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 17px;
+  opacity: 0.8;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
+}
+
+form > button:hover {
+  transition: 0.2s opacity ease-in-out;
+  opacity: 1;
 }
 
 .no-match {
