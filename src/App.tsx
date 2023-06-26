@@ -6,6 +6,7 @@ import { ContactContent } from "./components/ContactContent";
 import { NoMatch } from "./components/NoMatch";
 import "./App.css";
 
+
 const App = () => {
   return (
     <div className="page-wrapper">
@@ -19,5 +20,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

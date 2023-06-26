@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { SocialMediaIcons } from "./SocialMediaIcons";
 
-export const Header = () => {
+
+export const Header = () => {  
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div className="header">
       <h2>
@@ -8,16 +14,17 @@ export const Header = () => {
         <span className="second-symbol"></span>
       </h2>
       <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
+        <li className="tab">
+          <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/menu">Menu</NavLink>
+        <li className="tab">
+          <NavLink to="/menu" onClick={scrollToTop}>Menu</NavLink>
         </li>
-        <li>
-          <NavLink to="/contact">Contact</NavLink>
+        <li className="tab">
+          <NavLink to="/contact" onClick={scrollToTop}>Contact</NavLink>
         </li>
       </ul>
+      <SocialMediaIcons />
       <button>Reservation</button>
     </div>
   );
