@@ -333,6 +333,7 @@ li {
 
 .reasons-why {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 100svh;
 }
 
@@ -342,6 +343,7 @@ li {
   margin: 0;
   padding: 0;
   font-size: 3.5rem;
+  grid-row: -3 / -2;
 }
 
 .cards-container {
@@ -351,11 +353,12 @@ li {
   justify-content: center;
   justify-items: center;
   gap: 15px;
+  grid-row: -2 / -1;
 }
 
 .card {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
   width: 100%;
   height: 100%;
@@ -369,19 +372,38 @@ li {
   padding: 0;
 }
 
-.card > svg {
+.idk {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   grid-row: 1 / 2;
-  grid-column: 1 / 2;
-  justify-self: center;
+  align-self: end;
+  gap: 15px;
 }
 
-.card > h3 {
+.card > div > svg {
+  justify-self: center;
+  align-self: center;
+}
+
+.utensils {
+  padding-top: px;
+}
+
+.card > div > h3 {
   grid-row: 1 / 2;
   align-self: center;
   text-align: center;
   grid-column:  1 / 2;;
   font-weight: bold;
   font-size: 2rem;
+  align-self: end;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .card > h4 {
@@ -390,8 +412,10 @@ li {
   letter-spacing: 0.06rem;
   line-height: 1.5rem;
   text-align: center;
+  align-self: start;
   width: 50%;
-  opacity: 0.7;
+  opacity: 0.8;
+  padding-top: 40px;
 }
 
 .contact-content,
@@ -443,6 +467,7 @@ form {
 .contact-text > * {
   opacity: 0.85;
 }
+
 
 .field {
   display: flex;
