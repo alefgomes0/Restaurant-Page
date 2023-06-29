@@ -102,7 +102,7 @@ a.active:hover {
   font-weight: 700;
   align-self: center;
   letter-spacing: 0.1rem;
-  font-size: 40px;
+  font-size: 2.6rem;
 }
 
 li > a:hover {
@@ -180,7 +180,7 @@ li {
 }
 
 .under-header-texts > h3 {
-  font-size: 70px;
+  font-size: 5rem;
 }
 
 .under-header > * {
@@ -194,7 +194,7 @@ li {
   justify-items: center;
   align-items: center;
   align-content: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .media-icons-container > * {
@@ -223,6 +223,7 @@ li {
   grid-template-rows: 1fr auto;
   height: 95svh;
   position: relative;
+  border-bottom: 3px solid #3f71da
 }
 
 .carousel-container > ul {
@@ -329,6 +330,66 @@ li {
 .circles-container > div {
   margin: 0 6px;
   cursor: pointer;
+}
+
+.reasons-why {
+  display: grid;
+  height: 100svh;
+}
+
+.reasons-why > h2 {
+  text-align: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 15px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+
+}
+
+.card > * {
+  margin: 0;
+  padding: 0;
+}
+
+.card > svg {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.card > h3 {
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: center;
+  grid-column:  1 / 2;;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.card > h4 {
+  justify-self: center;
+  width: 40%;
+  letter-spacing: 0.06rem;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
 .contact-content,

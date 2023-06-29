@@ -1,6 +1,7 @@
 import { UnderHeader } from "./UnderHeader";
 import { Carousel } from "./Carousel";
 import { GalleryData } from "./GalleryData";
+import { ReasonsWhy } from "./ReasonsWhy";
 
 export const HomeContent = () => {
   const galleryData = GalleryData.slice();
@@ -9,6 +10,7 @@ export const HomeContent = () => {
     <div className="home-content">
       <UnderHeader />
       <Carousel data={galleryData} />
+      <ReasonsWhy />
     </div>
   );
 };
