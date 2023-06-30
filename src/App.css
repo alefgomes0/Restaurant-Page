@@ -43,7 +43,7 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 3fr 1fr 1fr;
-  padding: 10px 1%;
+  padding: 10px 1rem;
   background-color: #fff;
   border-bottom: 1px solid #abaaaa;
   position: fixed;
@@ -101,8 +101,8 @@ a.active:hover {
   color: #262b2d;
   font-weight: 700;
   align-self: center;
-  letter-spacing: 0.1rem;
-  font-size: 2.6rem;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
 }
 
 li > a:hover {
@@ -333,17 +333,34 @@ li {
 
 .reasons-why {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   height: 100svh;
+  position: relative;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 247, 248, 1) 13%,
+    rgba(243, 245, 247, 1) 25%,
+    rgba(241, 243, 245, 1) 39%,
+    rgba(239, 243, 251, 1) 50%,
+    rgba(230, 231, 233, 1) 62%,
+    rgba(226, 227, 231, 1) 72%,
+    rgba(222, 224, 229, 1) 88%,
+    rgba(203, 206, 210, 1) 100%
+  );
 }
 
 .reasons-why > h2 {
-  text-align: center;
-  align-self: center;
+  text-align: left;
+  align-self: start;
   margin: 0;
-  padding: 0;
+  padding: 0 1.2rem;
   font-size: 3.5rem;
   grid-row: -3 / -2;
+  grid-column: 1 / -1;
+  letter-spacing: 0.1rem;
 }
 
 .cards-container {
@@ -354,9 +371,11 @@ li {
   justify-items: center;
   gap: 15px;
   grid-row: -2 / -1;
+  grid-column: 1 / -1;
 }
 
 .card {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
@@ -364,7 +383,7 @@ li {
   height: 100%;
   justify-content: center;
   justify-items: center;
-
+  padding: 0 1.2rem;
 }
 
 .card > * {
@@ -384,10 +403,10 @@ li {
   gap: 15px;
 }
 
-.card > div > svg {
-  justify-self: center;
+.idk > svg {
   align-self: center;
 }
+
 
 .utensils {
   padding-top: px;
@@ -416,6 +435,16 @@ li {
   width: 50%;
   opacity: 0.8;
   padding-top: 40px;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  grid-row: 2 / 3;
+  align-self: center;
+  color: #3f71da;
+  font-weight: 900;
+  transform: translateX(50%);
 }
 
 .contact-content,
