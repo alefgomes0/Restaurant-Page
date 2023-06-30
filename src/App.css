@@ -97,13 +97,14 @@ a.active:hover {
   font-size: 18px;
 }
 
-.header > h2 {
+.header > h1 {
   color: #262b2d;
   font-weight: 700;
   align-self: center;
   letter-spacing: 0.2rem;
   font-size: 3rem;
 }
+
 
 li > a:hover {
   cursor: pointer;
@@ -333,10 +334,9 @@ li {
 
 .reasons-why {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr;
   height: 100svh;
-  position: relative;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -352,13 +352,14 @@ li {
   );
 }
 
+
 .reasons-why > h2 {
   text-align: left;
   align-self: start;
   margin: 0;
   padding: 0 1.2rem;
   font-size: 3.5rem;
-  grid-row: -3 / -2;
+  grid-row: 3 / 4;
   grid-column: 1 / -1;
   letter-spacing: 0.1rem;
 }
@@ -370,17 +371,15 @@ li {
   justify-content: center;
   justify-items: center;
   gap: 15px;
-  grid-row: -2 / -1;
+  grid-row: 3 / 4;
   grid-column: 1 / -1;
 }
 
 .card {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-  width: 100%;
-  height: 100%;
   justify-content: center;
   justify-items: center;
   padding: 0 1.2rem;
@@ -447,7 +446,7 @@ li {
   transform: translateX(50%);
 }
 
-.contact-content,
+
 .menu {
   display: grid;
   align-content: center;
@@ -457,6 +456,12 @@ li {
 }
 
 .contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100svh;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -473,6 +478,8 @@ li {
 }
 
 form {
+  display: grid;
+  width: 50%;
   background: rgb(78, 77, 77);
   background: linear-gradient(
     180deg,
@@ -487,10 +494,10 @@ form {
     rgba(28, 28, 28, 1) 100%
   );
   color: #fff;
-  display: grid;
+  margin-top: 70px;
   padding: 10px 40px;
   border-radius: 6px;
-  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contact-text > * {
@@ -541,6 +548,8 @@ form > button {
   font-size: 17px;
   opacity: 0.8;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem 0;
+
 }
 
 form > button:hover {
@@ -558,4 +567,82 @@ form > button:hover {
 .no-match > h3 {
   font-size: 50px;
   color: #ff2121;
+}
+
+
+@media(max-width: 1200px) {
+  .header > h1 {
+    font-size: 2.5rem;
+  }
+
+  .card > div > h3 {
+    font-size: 1.5rem;
+  }
+
+  .card > h4{
+    width: 75%;
+    font-size: 0.75rem;
+    opacity: 1;
+  }
+
+  .header > ul {
+    justify-self: start;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media(max-width: 1000px) {
+  .header > h1 {
+    font-size: 2rem;
+    letter-spacing: 0.17rem;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .header > button {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .media-icons-container > img {
+    width: 14px;
+    height: 14px;
+  }
+
+  ul {
+
+    gap: 1px;
+  }
+}
+
+@media(max-width: 810px) {
+  .header > h1 {
+    font-size: 1.5rem;
+  }
+
+  .reasons-why {
+    grid-template-rows: 1fr 1fr;
+    height: max-content
+  }
+
+  .reasons-why > h2 {
+    text-align:  center;
+    grid-row: 1 / 2;
+    padding: 40px 0 0 0;
+    margin: 0;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .card > h4{
+    width: 50%;
+  }
 }

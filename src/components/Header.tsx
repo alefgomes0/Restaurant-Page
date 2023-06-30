@@ -9,10 +9,10 @@ export const Header = () => {
 
   return (
     <div className="header">
-      <h2>
+      <h1>
         <span className="first-symbol"></span>SeaYa Restaurant
         <span className="second-symbol"></span>
-      </h2>
+      </h1>
       <ul>
         <li className="tab">
           <NavLink to="/" onClick={scrollToTop}>Home</NavLink>

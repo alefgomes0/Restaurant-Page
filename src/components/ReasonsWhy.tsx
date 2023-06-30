@@ -1,6 +1,9 @@
 export const ReasonsWhy = () => {
   return (
     <div className="reasons-why">
+      <div className="empty-row1"></div>
+      <div className="empty-row2"></div>
+
       <h2>
         <span className="orange">Features</span>
       </h2>
