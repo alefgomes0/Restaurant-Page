@@ -1,9 +1,6 @@
 export const ReasonsWhy = () => {
   return (
     <div className="reasons-why">
-      <div className="empty-row1"></div>
-      <div className="empty-row2"></div>
-
       <h2>
         <span className="orange">Features</span>
       </h2>
@@ -33,20 +30,6 @@ export const ReasonsWhy = () => {
             faucibus pulvinar. Auctor urna nunc id cursus metus aliquam. Feugiat
             sed lectus vestibulum mattis.
           </h4>
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
-              viewBox="0 0 20 20"
-              className="arrow"
-            >
-              <g transform="rotate(90 10 10)">
-                <path
-                  fill="currentColor"
-                  d="M3.133 9.16a.5.5 0 1 0 .738.675l5.631-6.168v13.831a.5.5 0 1 0 1 0V3.67l5.628 6.165a.5.5 0 0 0 .739-.674l-6.314-6.916a.746.746 0 0 0-.632-.24a.746.746 0 0 0-.476.24L3.133 9.16Z"
-                />
-              </g>
-            </svg>
         </div>
         <div className="card card-2">
           <div className="idk">
@@ -71,20 +54,6 @@ export const ReasonsWhy = () => {
             Bibendum neque egestas congue quisque egestas diam. Mollis aliquam
             ut porttitor leo a diam sollicitudin tempor.
           </h4>
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="60"
-              height="60"
-              viewBox="0 0 20 20"
-              className="arrow"
-            >
-              <g transform="rotate(90 10 10)">
-                <path
-                  fill="currentColor"
-                  d="M3.133 9.16a.5.5 0 1 0 .738.675l5.631-6.168v13.831a.5.5 0 1 0 1 0V3.67l5.628 6.165a.5.5 0 0 0 .739-.674l-6.314-6.916a.746.746 0 0 0-.632-.24a.746.746 0 0 0-.476.24L3.133 9.16Z"
-                />
-              </g>
-            </svg>
         </div>
         <div className="card card-3">
           <div className="idk">

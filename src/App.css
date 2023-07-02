@@ -41,13 +41,15 @@ body {
 
 .header {
   display: grid;
+  align-items: center;
+  align-content: center;
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 3fr 1fr 1fr;
   padding: 10px 1rem;
   background-color: #fff;
-  border-bottom: 1px solid #abaaaa;
   position: fixed;
-  z-index: 99;
+  z-index: 10;
+  box-shadow: 0 3px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 a,
@@ -105,7 +107,6 @@ a.active:hover {
   font-size: 3rem;
 }
 
-
 li > a:hover {
   cursor: pointer;
   border-bottom: 1px solid #3f71da;
@@ -115,7 +116,7 @@ li > a:hover {
 .header > button {
   grid-column: -2 / -1;
   width: clamp(100px, 170px, 220px);
-  height: clamp(27px, 41px, 60px);
+  height: clamp(27px, 100%, 60px);
   justify-self: end;
   align-self: end;
   margin-left: 10px;
@@ -352,14 +353,13 @@ li {
   );
 }
 
-
 .reasons-why > h2 {
   text-align: left;
   align-self: start;
   margin: 0;
-  padding: 0 1.2rem;
+  padding: 0 1.22rem;
   font-size: 3.5rem;
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
   grid-column: 1 / -1;
   letter-spacing: 0.1rem;
 }
@@ -373,6 +373,7 @@ li {
   gap: 15px;
   grid-row: 3 / 4;
   grid-column: 1 / -1;
+  padding: 0 1rem 0 1.22rem;
 }
 
 .card {
@@ -382,7 +383,8 @@ li {
   grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
-  padding: 0 1.2rem;
+  border: 2px solid #aeaeae;
+  border-radius: 20px;
 }
 
 .card > * {
@@ -398,14 +400,13 @@ li {
   align-items: center;
   align-content: center;
   grid-row: 1 / 2;
-  align-self: end;
-  gap: 15px;
+  align-self: center;
+  gap: 5px;
 }
 
 .idk > svg {
   align-self: center;
 }
-
 
 .utensils {
   padding-top: px;
@@ -413,12 +414,9 @@ li {
 
 .card > div > h3 {
   grid-row: 1 / 2;
-  align-self: center;
-  text-align: center;
-  grid-column:  1 / 2;;
+  grid-column: 1 / 2;
   font-weight: bold;
   font-size: 2rem;
-  align-self: end;
   letter-spacing: 0.1rem;
   margin: 0;
   padding: 0;
@@ -433,19 +431,8 @@ li {
   align-self: start;
   width: 50%;
   opacity: 0.8;
-  padding-top: 40px;
+  padding-bottom: 1rem;
 }
-
-.arrow {
-  position: absolute;
-  right: 0;
-  grid-row: 2 / 3;
-  align-self: center;
-  color: #3f71da;
-  font-weight: 900;
-  transform: translateX(50%);
-}
-
 
 .menu {
   display: grid;
@@ -495,15 +482,15 @@ form {
   );
   color: #fff;
   margin-top: 70px;
-  padding: 10px 40px;
+  padding: 15px 40px;
   border-radius: 6px;
-  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1),
+    -1px -1px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contact-text > * {
   opacity: 0.85;
 }
-
 
 .field {
   display: flex;
@@ -529,7 +516,7 @@ form {
 
 form > button {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   justify-self: center;
   background: rgb(49, 94, 190);
   background: linear-gradient(
@@ -549,7 +536,8 @@ form > button {
   opacity: 0.8;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
   padding: 0.3rem 0;
-
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 form > button:hover {
@@ -569,8 +557,7 @@ form > button:hover {
   color: #ff2121;
 }
 
-
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .header > h1 {
     font-size: 2.5rem;
   }
@@ -579,7 +566,7 @@ form > button:hover {
     font-size: 1.5rem;
   }
 
-  .card > h4{
+  .card > h4 {
     width: 75%;
     font-size: 0.75rem;
     opacity: 1;
@@ -593,7 +580,7 @@ form > button:hover {
   }
 }
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   .header > h1 {
     font-size: 2rem;
     letter-spacing: 0.17rem;
@@ -615,26 +602,27 @@ form > button:hover {
   }
 
   ul {
-
     gap: 1px;
   }
 }
 
-@media(max-width: 810px) {
+@media (max-width: 810px) {
   .header > h1 {
     font-size: 1.5rem;
   }
 
   .reasons-why {
     grid-template-rows: 1fr 1fr;
-    height: max-content
+    height: max-content;
   }
 
   .reasons-why > h2 {
-    text-align:  center;
-    grid-row: 1 / 2;
-    padding: 40px 0 0 0;
+    align-self: center;
+    text-align: center;
+    grid-row: 2 / 3;
+    padding: 0;
     margin: 0;
+    padding-bottom: 2rem;
   }
 
   .cards-container {
@@ -642,7 +630,8 @@ form > button:hover {
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .card > h4{
+  .card > h4 {
     width: 50%;
+    padding-top: 20px;
   }
 }
