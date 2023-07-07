@@ -20,7 +20,7 @@ export const Carousel = (props: GalleryProps) => {
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
-    setTimerActive(true); 
+    setTimerActive(true);
   };
 
   const handleLeftArrowClick = () => {
@@ -29,12 +29,12 @@ export const Carousel = (props: GalleryProps) => {
     } else {
       setIndex((prevIndex) => prevIndex - 1);
     }
-    setTimerActive(true); 
+    setTimerActive(true);
   };
 
   const handleCircledClick = (someIndex: number) => {
     setIndex(someIndex);
-    setTimerActive(true); 
+    setTimerActive(true);
   };
 
   useEffect(() => {
@@ -53,7 +53,6 @@ export const Carousel = (props: GalleryProps) => {
     };
   }, [index, timerActive]);
 
-
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
@@ -70,7 +69,6 @@ export const Carousel = (props: GalleryProps) => {
     };
   }, [index]);
 
-
   return (
     <section aria-label="restaurant-photos">
       <div className="carousel-container">
@@ -81,7 +79,11 @@ export const Carousel = (props: GalleryProps) => {
                 key={slide.id}
                 className={index === slideIndex ? "slide show" : "slide"}
               >
-                <img src={process.env.PUBLIC_URL + slide.url} alt={slide.alt} key={slide.id} />
+                <img
+                  src={process.env.PUBLIC_URL + slide.url}
+                  alt={slide.alt}
+                  key={slide.id}
+                />
               </li>
             );
           })}
@@ -96,7 +98,10 @@ export const Carousel = (props: GalleryProps) => {
         <div className="circles-container">
           {props.data.map((circle, circleIndex) => {
             return (
-              <div onClick={() => handleCircledClick(circleIndex)} key={circleIndex}>
+              <div
+                onClick={() => handleCircledClick(circleIndex)}
+                key={circleIndex}
+              >
                 {index === circleIndex ? "⬤" : "○"}
               </div>
             );

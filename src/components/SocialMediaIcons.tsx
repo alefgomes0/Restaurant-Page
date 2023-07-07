@@ -1,9 +1,9 @@
 export const SocialMediaIcons = () => {
   return (
     <div className="media-icons-container">
-      <img src="https://icongr.am/entypo/instagram.svg?size=15&color=currentColor" alt="instagram icon" />
-      <img src="https://icongr.am/entypo/facebook.svg?size=15&color=currentColor" alt="facebook icon" />
-      <img src="https://icongr.am/entypo/twitter.svg?size=16&color=3f71da" alt="twitter icon" />
+      <img src="https://icongr.am/entypo/instagram-with-circle.svg?size=18&color=8c8c8c" alt="instagram icon" />
+      <img src="https://icongr.am/entypo/facebook-with-circle.svg?size=18&color=8c8c8c" alt="facebook icon" />
+      <img src="https://icongr.am/entypo/twitter-with-circle.svg?size=18&color=8c8c8c" alt="twitter icon" />
     </div>
   );
 };
