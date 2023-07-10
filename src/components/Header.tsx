@@ -3,11 +3,10 @@ import { NavLink } from "react-router-dom";
 import { SocialMediaIcons } from "./SocialMediaIcons";
 import { DropDown } from "./DropDown";
 
-
-export const Header = () => {  
+export const Header = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  };
 
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 820);
 
@@ -56,4 +55,4 @@ export const Header = () => {
       <button>Reservation</button>
     </div>
   );
-}
+};

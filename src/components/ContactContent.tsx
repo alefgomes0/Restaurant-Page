@@ -1,4 +1,13 @@
+import { useEffect, useRef } from "react";
+
+
 export const ContactContent = () => {
+  const inputElement = useRef<HTMLInputElement>(null!);
+
+  useEffect(() => {
+    inputElement.current.focus();
+  }, [])
+  
   return (
     <div className="contact-content">
       <form>
@@ -9,7 +18,7 @@ export const ContactContent = () => {
         </div>
         <div className="field">
           <label>Name</label>
-          <input></input>
+          <input ref={inputElement}></input>
         </div>
         <div className="field">
           <label>Email</label>
