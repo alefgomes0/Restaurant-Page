@@ -136,12 +136,13 @@ a.active:hover {
   border-radius: 3px;
   font-size: 17px;
   opacity: 0.8;
-  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.5px 3px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 .header > button:hover {
   transition: 0.2s opacity ease-in-out;
   opacity: 1;
+  box-shadow: 0.5px 3px 3px 0px rgba(0, 0, 0, 0.3) inset;
 }
 
 li {
@@ -174,7 +175,7 @@ li {
   margin: 10px 0 0 0;
   padding: 9px;
   border-radius: 6px;
-  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0.2px 2px 4px 0 rgba(0, 0, 0, 0.3);
   left: 0;
 }
 
@@ -483,6 +484,7 @@ li {
   justify-items: center;
   border: 2px solid #aeaeae;
   border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card > * {
@@ -582,8 +584,7 @@ form {
   margin-top: 70px;
   padding: 15px 40px;
   border-radius: 6px;
-  box-shadow: 3px 7px 2px 4px rgba(0, 0, 0, 0.1),
-    -1px -1px 4px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.5px 4px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .contact-text > * {
@@ -604,6 +605,7 @@ form {
 .field > textarea {
   margin-bottom: 25px;
   background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 .field > input:focus,
@@ -631,16 +633,27 @@ form > button {
   cursor: pointer;
   border-radius: 3px;
   font-size: 17px;
-  opacity: 0.8;
-  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
   padding: 0.3rem 0;
   font-size: 1.3rem;
+  box-shadow: 0.5px 3px 3px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
 }
 
 form > button:hover {
   transition: 0.2s opacity ease-in-out;
   opacity: 1;
+  box-shadow: 0.5px 3px 3px 0px rgba(0, 0, 0, 0.1) inset;
+  background: rgb(49, 94, 190);
+  background: linear-gradient(
+    180deg,
+    rgba(49, 94, 190, 1) 0%,
+    rgba(46, 95, 199, 1) 25%,
+    rgba(31, 80, 183, 1) 50%,
+    rgba(31, 80, 183, 1) 75%,
+    rgba(24, 74, 181, 1) 89%,
+    rgba(10, 64, 177, 1) 100%
+  );
 }
 
 .no-match {
