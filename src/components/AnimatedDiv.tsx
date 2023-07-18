@@ -2,34 +2,26 @@ import { useEffect, useRef, useState } from "react";
 
 export const AnimatedDiv = () => {
   const h2Ref = useRef(null);
-  const divRef = useRef(null);
-  const [isVisible, setIsVisible] = useState({
-    h2: false,
-    div: false,
-  });
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const options = {
-      threshold: 0.7,
+      threshold: 0.8,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (entry.target === h2Ref.current) {
-            setIsVisible((prev) => ({ ...prev, h2: true }));
+            setIsVisible(true);
             observer.unobserve(h2Ref.current);
-          } else if (entry.target === divRef.current) {
-            setIsVisible((prev) => ({ ...prev, div: true }));
-            observer.unobserve(divRef.current);
           }
         }
       });
     }, options);
 
-    if (h2Ref.current && divRef.current) {
+    if (h2Ref.current) {
       observer.observe(h2Ref.current);
-      observer.observe(divRef.current);
     }
 
     return () => {
@@ -39,10 +31,12 @@ export const AnimatedDiv = () => {
 
   return (
     <>
-      <h2 className={isVisible.h2 ? "animate-slide" : ""} ref={h2Ref}>
+      <h2 className={isVisible ? "animate-slide" : ""} ref={h2Ref}>
         <span>Here you'll find</span>
       </h2>
-      <div className={`cards-container ${isVisible.div ? "animate-slide" : ""}`} ref={divRef}>
+      <div
+        className={`cards-container ${isVisible ? "animate-slide" : ""}`}
+      >
         <div className="card card-1">
           <div className="idk">
             <svg
