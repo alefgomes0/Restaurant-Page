@@ -65,11 +65,13 @@ body {
   align-content: center;
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 3fr 1fr 1fr;
-  padding: 10px;
+  padding: 18px 18px 18px 16px;
   background-color: #fff;
   position: fixed;
   z-index: 10;
   box-shadow: 0 3px 1px 3px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  width: 100%;
 }
 
 a,
@@ -133,10 +135,10 @@ a.active:hover {
 
 .header > button {
   grid-column: -2 / -1;
-  width: clamp(100px, 170px, 220px);
-  height: clamp(27px, 100%, 60px);
+  width: clamp(100px, 180px, 220px);
+  height: 45px;
   justify-self: end;
-  align-self: end;
+  align-self: center;
   margin-left: 10px;
   background: rgb(49, 94, 190);
   background: linear-gradient(
@@ -193,7 +195,6 @@ li {
   padding: 9px;
   border-radius: 6px;
   box-shadow: 0.2px 2px 4px 0 rgba(0, 0, 0, 0.3);
-  left: 0;
 }
 
 .dropdown-menu > a {
@@ -203,7 +204,7 @@ li {
 .dropdown-menu > a > button {
   border: none;
   display: block;
-  color: #1b1b1b;
+  color: var(--black);
   font-size: 18px;
   font-weight: 600;
   width: 100%;
@@ -233,7 +234,6 @@ li {
   justify-items: center;
   animation: dropdown-expand 0.25s ease-in-out;
   transform-origin: top;
-  transform: translateX(-50%);
 }
 
 .hide {
@@ -499,13 +499,13 @@ li {
   gap: 100px;
   grid-row: 3 / 4;
   grid-column: 1 / -1;
-  padding: 0 1rem 0 1.22rem;
+  padding: 0 18px 18px 18px;
   opacity: 0.01;
 }
 
 .cards-container.animate-slide {
   opacity: 1;
-  animation: slide-right 1.2s ease-in-out;
+  animation: slide-right 1.5s ease-in-out;
 }
 
 .card {
@@ -519,6 +519,10 @@ li {
   background-color: hsl(220, 33%, 98%);
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-1 {
+  transition-delay: 2s;
 }
 
 .card > * {
@@ -729,6 +733,12 @@ form > button:hover {
   }
 }
 
+@media(max-width: 1100px) {
+  .header > h1 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 1000px) {
   .header > h1 {
     font-size: 2rem;
@@ -740,8 +750,6 @@ form > button:hover {
   }
 
   .header > button {
-    width: 160px;
-    height: 40px;
     font-size: 14px;
   }
 
@@ -759,15 +767,36 @@ form > button:hover {
   }
 }
 
+@media(max-width: 900px) {
+  .header {
+    gap: 20px;
+    height: 50px;
+  }
+
+  .header > ul {
+    gap: 15px;
+  }
+
+  .header > h1 {
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+  }
+
+  .header > button {
+    width: 160px;
+    height: 35px;
+  }
+}
+
 @media (max-width: 820px) {
   .header {
-    grid-template-columns: 4fr 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
     justify-content: center;
     justify-items: center;
   }
 
   .header > h1 {
-    justify-self: start;
+    justify-self: center;
     letter-spacing: 0rem;
   }
 
@@ -820,20 +849,33 @@ form > button:hover {
   .contact-content > form > h4 {
     font-size: 1rem;
   }
+
+  .card > div > h3 {
+    font-size: 1rem;
+  }
+
+  .reasons-why > .cards-container > .card {
+    height: 200px;
+  }
+
+  .card > h4 {
+    font-size: 10px;
+    line-height: 1rem;
+    padding: 10px 0;
+  }
 }
 
 @media (max-width: 600px) {
   .header {
     padding: 5px 5px;
+    gap: 5px;
+    margin-bottom: 20px;
   }
 
   .header > h1 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
-  .dropdown-container {
-    align-self: end;
-  }
 
   .menu-title > svg {
     width: 18px;
@@ -842,7 +884,8 @@ form > button:hover {
 
   .header > button {
     width: 100px;
-    height: 25px;
+    height: 30px;
+    font-size: 12px;
   }
 
   .under-header-texts {
@@ -857,25 +900,25 @@ form > button:hover {
 
 @keyframes dropdown-expand {
   from {
-    transform: scaleY(0) translateX(-50%);
+    transform: scaleY(0)
   }
 
   70% {
-    transform: scaleY(1.1) translateX(-50%);
+    transform: scaleY(1.1) 
   }
 
   to {
-    transform: scaleY(1) translateX(-50%);
+    transform: scaleY(1) 
   }
 }
 
 @keyframes dropdown-hide {
   from {
-    transform: scaleY(1) translateX(-50%);
+    transform: scaleY(1)
   }
 
   to {
-    transform: scaleY(0) translateX(-50%);
+    transform: scaleY(0)
   }
 }
 

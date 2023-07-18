@@ -10,7 +10,7 @@ export const AnimatedDiv = () => {
 
   useEffect(() => {
     const options = {
-      threshold: 0.9,
+      threshold: 0.7,
     };
 
     const observer = new IntersectionObserver((entries) => {

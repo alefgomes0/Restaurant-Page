@@ -24,12 +24,12 @@ export const Header = () => {
 
   return (
     <div className="header">
-      <h1>
-        <span className="first-symbol"></span>SeaYa Restaurant
-        <span className="second-symbol"></span>
-      </h1>
       {isDesktop ? (
         <>
+          <h1>
+            <span className="first-symbol"></span>SeaYa Restaurant
+            <span className="second-symbol"></span>
+          </h1>
           <ul>
             <li className="tab">
               <NavLink to="/" onClick={scrollToTop}>
@@ -48,11 +48,18 @@ export const Header = () => {
             </li>
           </ul>
           <SocialMediaIcons />
+          <button>Reservation</button>
         </>
       ) : (
-        <DropDown />
+        <>
+          <DropDown />
+          <h1>
+            <span className="first-symbol"></span>SeaYa Restaurant
+            <span className="second-symbol"></span>
+          </h1>
+          <button>Reservation</button>
+        </>
       )}
-      <button>Reservation</button>
     </div>
   );
 };
