@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: "QuicksandBold";
+  src: url("./assets/fonts/quicksand-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/quicksand-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Kablammo";
   src: url("./assets/fonts/kablammo-regular-variablefont_morf-webfont.woff2")
       format("woff2"),
@@ -24,6 +34,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black: hsl(222, 14%, 14%);
+  --blue: hsl(221, 68%, 55%);
+}
+
 html,
 body {
   width: 100%;
@@ -32,7 +47,7 @@ body {
 }
 
 .page-wrapper {
-  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: "Quicksand", "QuicksandBold", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif, "Kablammo";
   grid-template-rows: 2fr 8fr;
@@ -63,11 +78,11 @@ a:hover {
 }
 
 a:visited {
-  color: #3f71da;
+  color: hsl(224, 6%, 50%);
 }
 
 a.active {
-  color: #d07913;
+  color: hsl(32, 83%, 45%);
   font-weight: bold;
 }
 
@@ -78,13 +93,13 @@ a.active:hover {
 .first-symbol::before {
   font-family: "Kablammo";
   content: "{ ";
-  color: #3f71da;
+  color: var(--blue);
 }
 
 .second-symbol::before {
   font-family: "Kablammo";
   content: " }";
-  color: #3f71da;
+  color: var(--blue);
 }
 
 .header > * {
@@ -101,16 +116,17 @@ a.active:hover {
 }
 
 .header > h1 {
-  color: #262b2d;
+  color: var(--black);
   font-weight: 700;
   align-self: center;
   letter-spacing: 0.2rem;
   font-size: 3rem;
+  opacity: 0.9;
 }
 
 .header > ul > li > a:hover {
   cursor: pointer;
-  border-bottom: 1px solid #3f71da;
+  border-bottom: 1px solid var(--blue);
   padding-bottom: 2px;
 }
 
@@ -247,21 +263,22 @@ li {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(246, 247, 248, 1) 13%,
-    rgba(243, 245, 247, 1) 25%,
-    rgba(241, 243, 245, 1) 39%,
-    rgba(239, 243, 251, 1) 50%,
-    rgba(230, 231, 233, 1) 62%,
-    rgba(226, 227, 231, 1) 72%,
-    rgba(222, 224, 229, 1) 88%,
-    rgba(203, 206, 210, 1) 100%
+    hsl(0, 0%, 100%) 0%,
+    hsl(210, 12%, 97%) 13%,
+    hsl(210, 20%, 96%) 25%,
+    hsl(210, 17%, 95%) 39%,
+    hsl(220, 60%, 96%) 50%,
+    hsl(220, 6%, 91%) 62%,
+    hsl(228, 9%, 90%) 72%,
+    hsl(223, 12%, 88%) 88%,
+    hsl(214, 7%, 81%) 100%
   );
 }
 
 .under-header-texts > * {
   margin: 0;
   padding: 0;
+  color: hsl(222, 14%, 14%);
 }
 
 .under-header-texts {
@@ -273,6 +290,7 @@ li {
 
 .under-header-texts > h3 {
   font-size: 5rem;
+  opacity: 0.9;
 }
 
 .under-header-texts > h5 {
@@ -295,7 +313,7 @@ li {
 
 .media-icons-container > * {
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.15;
 }
 
 .blue {
@@ -312,6 +330,7 @@ li {
 .subtext > * {
   margin: 0;
   padding: 0;
+  color: var(--black);
 }
 
 .orange {
@@ -482,14 +501,16 @@ li {
   grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
-  border: 2px solid #aeaeae;
+  border: 2px solid hsl(218, 7%, 45%);
+  background-color: hsl(220, 33%, 98%);
   border-radius: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card > * {
   margin: 0;
   padding: 0;
+  color: var(--black);
 }
 
 .idk {
@@ -525,8 +546,7 @@ li {
 .card > h4 {
   justify-self: center;
   font-size: 0.9rem;
-  letter-spacing: 0.06rem;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
   text-align: center;
   align-self: start;
   width: 50%;
