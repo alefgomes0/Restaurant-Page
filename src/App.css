@@ -37,6 +37,7 @@
 :root {
   --black: hsl(222, 14%, 14%);
   --blue: hsl(221, 68%, 55%);
+  --orange: hsl(32, 83%, 45%);
 }
 
 html,
@@ -480,6 +481,13 @@ li {
   grid-row: 2 / 3;
   grid-column: 1 / -1;
   letter-spacing: 0.1rem;
+  opacity: 0.01;
+}
+
+.reasons-why > .animate-slide {
+  opacity: 0.8;
+  animation: slide-right 0.8s ease-in-out;
+  color: var(--orange);
 }
 
 .cards-container {
@@ -492,6 +500,12 @@ li {
   grid-row: 3 / 4;
   grid-column: 1 / -1;
   padding: 0 1rem 0 1.22rem;
+  opacity: 0.01;
+}
+
+.cards-container.animate-slide {
+  opacity: 1;
+  animation: slide-right 1.2s ease-in-out;
 }
 
 .card {
@@ -501,7 +515,7 @@ li {
   grid-template-columns: 1fr;
   justify-content: center;
   justify-items: center;
-  border: 2px solid hsl(218, 7%, 45%);
+  border: 1px solid hsl(220, 2%, 28%);
   background-color: hsl(220, 33%, 98%);
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -862,5 +876,15 @@ form > button:hover {
 
   to {
     transform: scaleY(0) translateX(-50%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translate(-200%, 0%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
   }
 }
