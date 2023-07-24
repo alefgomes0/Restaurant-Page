@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { SocialMediaIcons } from "./SocialMediaIcons";
 import { DropDown } from "./DropDown";
 
@@ -27,7 +27,8 @@ export const Header = () => {
       {isDesktop ? (
         <>
           <h1>
-            <span className="first-symbol"></span>SeaYa Restaurant
+            <span className="first-symbol"></span>
+            <Link to="/">SeaYa Restaurant</Link>
             <span className="second-symbol"></span>
           </h1>
           <ul>
