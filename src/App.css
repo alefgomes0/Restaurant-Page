@@ -635,7 +635,7 @@ li {
   width: 400px;
   background-color: var(--orange);
   color: hsl(198, 16%, 87%);
-  border-radius: 6px;
+  border-radius: 3px;
   padding: 15px 0;
   font-weight: 500;
   font-size: 30px;
@@ -649,17 +649,18 @@ li {
 .wave-bottom > button:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4) inset;
 }
-
+.wave-top > button > a,
+.wave-bottom > button > a,
 .wave-top > button > a:visited,
 .wave-bottom > button > a:visited {
-  color: unset;
+  color: hsl(198, 16%, 87%);
 }
 
 .event-image {
   max-width: 900px;
   max-height: 600px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -828,6 +829,7 @@ form > button {
   font-size: 1.3rem;
   box-shadow: 0.5px 3px 3px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
+  border: none;
 }
 
 form > button:hover {
@@ -865,6 +867,13 @@ form > button:hover {
 }
 
 .img-attr > .name-gh {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.img-attr > .name-gh > * {
+  color: hsl(198, 16%, 87%);
   margin-bottom: 10px;
 }
 
@@ -892,25 +901,23 @@ form > button:hover {
   font-size: 12px;
 }
 
-.attributions > h5 > span {
-  font-size: 30px;
+.attributions > h5 > a {
   margin: 0;
   padding: 0;
+  color: #3f71da;
 }
 
 .footer {
   display: flex;
   background-color: rgba(6, 24, 39, 1);
   padding: 18px;
-  background-color: hsl(218, 63%, 51%);
+  background-color: hsl(213, 6%, 68%);
   opacity: 0.9;
   height: 20px;
 }
 
-footer > .name-gh {
+.footer > .name-gh {
   display: flex;
-  color: #3f71da;
-  color: hsl(198, 16%, 87%);
   align-items: center;
   gap: 5px;
   margin: 0;
@@ -919,6 +926,8 @@ footer > .name-gh {
 .name-gh > * {
   margin: 0;
   padding: 0;
+  color: var(--black);
+  font-weight: 700;
 }
 
 @media (max-width: 1200px) {
