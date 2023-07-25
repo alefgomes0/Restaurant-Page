@@ -2,6 +2,7 @@ import { UnderHeader } from "./UnderHeader";
 import { Carousel } from "./Carousel";
 import { GalleryData } from "./GalleryData";
 import { ReasonsWhy } from "./ReasonsWhy";
+import { Wave } from "./Wave";
 
 export const HomeContent = () => {
   const galleryData = GalleryData.slice();
@@ -11,6 +12,7 @@ export const HomeContent = () => {
       <UnderHeader />
       <Carousel data={galleryData} />
       <ReasonsWhy />
+      <Wave />
     </div>
   );
 };
