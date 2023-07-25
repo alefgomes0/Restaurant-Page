@@ -4,6 +4,7 @@ import { GalleryData } from "./GalleryData";
 import { ReasonsWhy } from "./ReasonsWhy";
 import { Wave } from "./Wave";
 import { AdditionalInfo } from "./AdditionalInfo";
+import { ImgAttr } from "./ImgAttr";
 
 export const HomeContent = () => {
   const galleryData = GalleryData.slice();
@@ -15,6 +16,7 @@ export const HomeContent = () => {
       <ReasonsWhy />
       <Wave />
       <AdditionalInfo />
+      <ImgAttr />
     </div>
   );
 };

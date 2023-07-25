@@ -688,7 +688,7 @@ li {
 
 .additional-info {
   display: flex;
-  border-top: 2px solid hsl(222, 12%, 37%);
+  border-top: 1px solid hsl(222, 12%, 37%);
   height: 50svh;
   background: rgb(13, 29, 43);
   background: linear-gradient(
@@ -858,11 +858,58 @@ form > button:hover {
   color: #ff2121;
 }
 
-footer {
-  height: 100px;
-  border: 2px solid red;
-  background-color: black;
-  z-index: 99;
+.img-attr {
+  background-color: rgb(2, 8, 12);
+  color: hsl(198, 16%, 87%);
+}
+
+.img-attr > .name-gh > h4 {
+  font-size: 12px;
+}
+
+.img-attr > .name-gh > a > svg {
+  width: 14px;
+  height: 14px;
+}
+
+.name-gh > a:visited {
+  color: unset;
+}
+
+.attributions {
+  display: flex;
+  align-items: center;
+}
+
+.attributions > h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.attributions > h5 > span {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  height: 50px;
+  background-color: rgba(6, 24, 39, 1);
+  padding-left: 18px;
+}
+
+.name-gh {
+  display: flex;
+  color: hsl(198, 16%, 87%);
+  align-items: center;
+  gap: 5px;
+}
+
+.name-gh > * {
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 1200px) {
