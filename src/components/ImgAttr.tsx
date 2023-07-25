@@ -18,7 +18,37 @@ export const ImgAttr = () => {
         </a>
       </div>
       <div className="attributions">
-        <h5>Image attributions | Carousel (in order of appearence) - </h5>
+        <h5>
+          Image attributions | Carousel (in order of appearence) - Ricardo Honda
+          at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/Xd5F5tEN_0w">
+            Unplash
+          </a>
+          . Khaled Mohamed at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/jHqxMeDRsSY">
+            Unplash.
+          </a>
+          Elena Mozhvilo at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/HnJJsRihlQw">
+            Unplash.
+          </a>
+          Farhad Ibrahimzade at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/ug4TZGjzFeY">
+            Unplash.
+          </a>
+          Ricardo Jimenez at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/Kzft6vrwRoM">
+            Unplash
+          </a>
+          "Wave" images (in order of appearence) - Mark Chan at{" "}
+          <a href="https://unsplash.com/pt-br/fotografias/fjHmkXoaPxk">
+            Unplash.{" "}
+          </a>
+          Solda at{" "}
+          <a href="https://pixabay.com/pt/photos/sushi-apresenta%C3%A7%C3%A3o-do-chef-alimentos-596930/">
+            Pixabay.
+          </a>
+        </h5>
       </div>
     </footer>
   );

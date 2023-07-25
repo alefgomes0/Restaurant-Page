@@ -29,7 +29,7 @@ export const Wave = () => {
         <div className="wave-bottom">
           <h3>Our menu has an ideal fit for everyone</h3>
           <img
-            src={process.env.PUBLIC_URL + "images/qimono-pixabay.jpg"}
+            src={process.env.PUBLIC_URL + "images/solda-sushi-pixabay.jpg"}
             alt="a dinner table setting with the sea on the background"
             className="event-image2"
           />

@@ -66,7 +66,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: 6fr 3fr 1fr 1fr;
   padding: 18px 18px 18px 16px;
-  background-color: #fff;
+  background-color: hsl(210, 9%, 97%);
   position: fixed;
   z-index: 10;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
@@ -266,8 +266,8 @@ li {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(210, 12%, 97%) 13%,
+    hsl(210, 10%, 97%) 0%,
+    hsl(210, 14%, 97%) 13%,
     hsl(210, 20%, 96%) 25%,
     hsl(210, 17%, 95%) 39%,
     hsl(220, 60%, 96%) 50%,
@@ -463,15 +463,15 @@ li {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(246, 247, 248, 1) 13%,
-    rgba(243, 245, 247, 1) 25%,
-    rgba(241, 243, 245, 1) 39%,
-    rgba(239, 243, 251, 1) 50%,
-    rgba(230, 231, 233, 1) 62%,
-    rgba(226, 227, 231, 1) 72%,
-    rgba(222, 224, 229, 1) 88%,
-    rgba(203, 206, 210, 1) 100%
+    hsl(210, 10%, 97%) 0%,
+    hsl(210, 14%, 97%) 13%,
+    hsl(210, 20%, 96%) 25%,
+    hsl(210, 17%, 95%) 39%,
+    hsl(220, 60%, 96%) 50%,
+    hsl(220, 6%, 91%) 62%,
+    hsl(228, 9%, 90%) 72%,
+    hsl(223, 12%, 88%) 88%,
+    hsl(214, 7%, 81%) 100%
   );
 }
 
@@ -519,7 +519,7 @@ li {
   justify-content: center;
   justify-items: center;
   border: 1px solid hsl(220, 2%, 28%);
-  background-color: hsl(220, 33%, 98%);
+  background-color: hsl(220, 37%, 97%);
   border-radius: 20px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
@@ -577,7 +577,7 @@ li {
 
 .wave-container {
   position: relative;
-  min-height: 250svh;
+  min-height: 280svh;
   background: rgb(77, 108, 131);
   background: linear-gradient(
     180deg,
@@ -633,7 +633,7 @@ li {
 .wave-top > button,
 .wave-bottom > button {
   width: 400px;
-  background-color: hsl(32, 79%, 52%);
+  background-color: var(--orange);
   color: hsl(198, 16%, 87%);
   border-radius: 6px;
   padding: 15px 0;
@@ -680,7 +680,7 @@ li {
 .event-image2 {
   justify-self: end;
   max-width: 900px;
-  max-height: 450px;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
@@ -859,8 +859,13 @@ form > button:hover {
 }
 
 .img-attr {
-  background-color: rgb(2, 8, 12);
+  background-color: hsl(204, 65%, 5%);
   color: hsl(198, 16%, 87%);
+  padding: 18px;
+}
+
+.img-attr > .name-gh {
+  margin-bottom: 10px;
 }
 
 .img-attr > .name-gh > h4 {
@@ -895,16 +900,20 @@ form > button:hover {
 
 .footer {
   display: flex;
-  height: 50px;
   background-color: rgba(6, 24, 39, 1);
-  padding-left: 18px;
+  padding: 18px;
+  background-color: hsl(218, 63%, 51%);
+  opacity: 0.9;
+  height: 20px;
 }
 
-.name-gh {
+footer > .name-gh {
   display: flex;
+  color: #3f71da;
   color: hsl(198, 16%, 87%);
   align-items: center;
   gap: 5px;
+  margin: 0;
 }
 
 .name-gh > * {
