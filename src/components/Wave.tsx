@@ -26,6 +26,17 @@ export const Wave = () => {
             <Link to="/contact">Contact us</Link>
           </button>
         </div>
+        <div className="wave-bottom">
+          <h3>Our menu has a perfect fit for everyone</h3>
+          <img
+            src={process.env.PUBLIC_URL + "images/qimono-pixabay.jpg"}
+            alt="a dinner table setting with the sea on the background"
+            className="event-image2"
+          />
+          <button>
+            <Link to="/menu">Menu</Link>
+          </button>
+        </div>
       </div>
     </section>
   );
