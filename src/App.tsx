@@ -5,6 +5,7 @@ import { HomeContent } from "./components/HomeContent";
 import { ContactContent } from "./components/ContactContent";
 import { NoMatch } from "./components/NoMatch";
 import "./App.css";
+import { Footer } from "./components/Footer";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="contact" element={<ContactContent />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

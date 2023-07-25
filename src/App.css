@@ -578,7 +578,17 @@ li {
 .wave-container {
   position: relative;
   min-height: 250svh;
-  background-color: hsl(206, 50%, 21%);
+  background: rgb(77, 108, 131);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 108, 131, 1) 0%,
+    rgba(61, 92, 117, 1) 11%,
+    rgba(43, 72, 95, 1) 25%,
+    rgba(27, 57, 80, 1) 50%,
+    rgba(27, 57, 80, 1) 80%,
+    rgba(19, 40, 57, 1) 90%,
+    rgba(13, 29, 43, 1) 100%
+  );
 }
 
 .wave {
@@ -674,6 +684,56 @@ li {
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.additional-info {
+  display: flex;
+  border-top: 2px solid hsl(222, 12%, 37%);
+  height: 50svh;
+  background: rgb(13, 29, 43);
+  background: linear-gradient(
+    180deg,
+    rgba(13, 29, 43, 1) 0%,
+    rgba(6, 24, 39, 1) 100%
+  );
+  color: hsl(198, 16%, 87%);
+  padding: 50px 18px 30px 18px;
+  justify-content: space-between;
+}
+
+.additional-info > div > h4 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.address > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.address,
+.opening-hours,
+.telephones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.opening-hours > h5,
+.address > div > h5,
+.telephones > h5 {
+  opacity: 0.7;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.telephones > h5 {
+  padding-left: 6px;
 }
 
 .menu {
@@ -796,6 +856,13 @@ form > button:hover {
 .no-match > h3 {
   font-size: 50px;
   color: #ff2121;
+}
+
+footer {
+  height: 100px;
+  border: 2px solid red;
+  background-color: black;
+  z-index: 99;
 }
 
 @media (max-width: 1200px) {

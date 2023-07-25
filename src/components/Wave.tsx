@@ -27,14 +27,14 @@ export const Wave = () => {
           </button>
         </div>
         <div className="wave-bottom">
-          <h3>Our menu has a perfect fit for everyone</h3>
+          <h3>Our menu has an ideal fit for everyone</h3>
           <img
             src={process.env.PUBLIC_URL + "images/qimono-pixabay.jpg"}
             alt="a dinner table setting with the sea on the background"
             className="event-image2"
           />
           <button>
-            <Link to="/menu">Menu</Link>
+            <Link to="/menu">Check our menu</Link>
           </button>
         </div>
       </div>
