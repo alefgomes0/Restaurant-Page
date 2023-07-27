@@ -26,7 +26,7 @@ export const Header = () => {
     <div className="header">
       {isDesktop ? (
         <>
-          <h1>
+          <h1 onClick={scrollToTop}>
             <span className="first-symbol"></span>
             <Link to="/">SeaYa Restaurant</Link>
             <span className="second-symbol"></span>

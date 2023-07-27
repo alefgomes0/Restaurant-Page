@@ -32,7 +32,7 @@ export const AnimatedDiv = () => {
   return (
     <>
       <h2 className={isVisible ? "animate-slide" : ""} ref={h2Ref}>
-        <span>Here you'll find</span>
+        <span>Here you will find</span>
       </h2>
       <div
         className={`cards-container ${isVisible ? "animate-slide" : ""}`}

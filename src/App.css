@@ -479,19 +479,17 @@ li {
   text-align: left;
   align-self: start;
   margin: 0;
-  padding: 0 1.22rem;
+  padding: 0 16px;
   font-size: 3.5rem;
   grid-row: 2 / 3;
   grid-column: 1 / -1;
   letter-spacing: 0.1rem;
   opacity: 0.01;
-  font-weight: lighter;
 }
 
 .reasons-why > .animate-slide {
-  opacity: 0.8;
+  opacity: 0.7;
   animation: slide-right 0.8s ease-in-out;
-  color: var(--orange);
 }
 
 .cards-container {
@@ -619,14 +617,18 @@ li {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 25px;
+  gap: 10px;
   padding-left: 18px;
+}
+
+.wave-top {
+  margin: 100px 0 125px 0;
 }
 
 .wave-top > h3,
 .wave-bottom > h3 {
   color: hsl(198, 16%, 87%);
-  font-size: 60px;
+  font-size: 42.5px;
   line-height: 1;
   margin: 0;
   font-weight: lighter;
@@ -639,11 +641,10 @@ li {
   color: hsl(198, 16%, 87%);
   border-radius: 3px;
   padding: 15px 0;
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-  margin: 0 0 100px 0;
   border: none;
 }
 
@@ -721,9 +722,8 @@ li {
 .telephones {
   display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: hsl(206, 72%, 11%);
-  gap: 20px;
+  gap: 30px;
   padding: 50px 50px 0 50px;
   border-radius: 3px;
 }
@@ -734,13 +734,29 @@ li {
   font-weight: lighter;
 }
 
+div > .additional-info > .opening-hours {
+  gap: 0;
+}
+
+div > .additional-info > .opening-hours > h4 {
+  padding-bottom: 30px;
+}
+
+div > .additional-info > .opening-hours > h5 {
+  padding-bottom: 15px;
+}
+
 .opening-hours > h5,
 .address > div > h5,
 .telephones > h5 {
-  opacity: 0.7;
+  opacity: 0.6;
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+
+.opening-hours > h5 {
+  padding-left: 2px;
 }
 
 .telephones > h5 {

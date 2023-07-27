@@ -16,25 +16,25 @@ export const Wave = () => {
           ></path>
         </svg>
         <div className="wave-top">
-          <h3>The perfect place for your next event</h3>
+          <h3>THE PERFECT PLACE FOR YOUR NEXT EVENT</h3>
           <img
             src={process.env.PUBLIC_URL + "images/mark-chan.jpg"}
             alt="a dinner table setting with the sea on the background"
             className="event-image"
           />
           <button>
-            <Link to="/contact">Contact us</Link>
+            <Link to="/contact">CONTACT US</Link>
           </button>
         </div>
         <div className="wave-bottom">
-          <h3>Our menu has an ideal fit for everyone</h3>
+          <h3>OUR MENU HAS AN IDEAL FIT FOR EVERYONE</h3>
           <img
             src={process.env.PUBLIC_URL + "images/solda-sushi-pixabay.jpg"}
             alt="a dinner table setting with the sea on the background"
             className="event-image2"
           />
           <button>
-            <Link to="/menu">Check our menu</Link>
+            <Link to="/menu">CHECK OUR MENU</Link>
           </button>
         </div>
       </div>

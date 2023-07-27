@@ -9,11 +9,13 @@ export const AdditionalInfo = () => {
       </div>
       <div className="opening-hours">
         <h4>Opening hours</h4>
-        <h5>Mon | 11h - 16h </h5>
-        <h5>Thu, Wed, Thur | 11h - 16h and 18h - 00h </h5>
-        <h5>Fri, Sat | 11h - 00h </h5>
-        <h5>Sun | 11h - 22h</h5>
+        <h5 style={{ whiteSpace: "pre" }}>Mon                               11h - 16h </h5>
+        <h5 style={{ whiteSpace: "pre" }}>Thu, Wed, Thur             11h - 16h and 18h - 00h </h5>
+        <h5 style={{ whiteSpace: "pre" }}>Fri, Sat                           11h - 00h </h5>
+        <h5 style={{ whiteSpace: "pre" }}>Sun                                11h - 22h</h5>
       </div>
+
+
       <div className="telephones">
         <h4>Telephones</h4>
         <h5>3213-5454</h5>
