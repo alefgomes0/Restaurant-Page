@@ -54,8 +54,9 @@ export const Header = () => {
       ) : (
         <>
           <DropDown />
-          <h1>
-            <span className="first-symbol"></span>SeaYa Restaurant
+          <h1 onClick={scrollToTop}>
+            <span className="first-symbol"></span>{" "}
+            <Link to="/">SeaYa Restaurant</Link>
             <span className="second-symbol"></span>
           </h1>
           <button>Reservation</button>
