@@ -637,11 +637,23 @@ li {
   font-weight: lighter;
 }
 
-.wave-top > button,
-.wave-bottom > button {
+.wave-top > a {
+  justify-self: start;
+}
+
+.wave-bottom > a {
+  justify-self: end;
+}
+
+.wave-top > a,
+.wave-bottom > a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wave-top > a > button,
+.wave-bottom > a > button {
   width: 400px;
   background-color: var(--orange);
   color: hsl(198, 16%, 87%);
@@ -654,14 +666,13 @@ li {
   border: none;
 }
 
-.wave-top > button:hover,
-.wave-bottom > button:hover {
+.wave-top > a > button:hover,
+.wave-bottom > a > button:hover {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4) inset;
 }
-.wave-top > button > a,
-.wave-bottom > button > a,
-.wave-top > button > a:visited,
-.wave-bottom > button > a:visited {
+.wave-top > a > button .wave-bottom > a > button,
+.wave-top > a:visited > button,
+.wave-bottom > a:visited > button {
   color: hsl(198, 16%, 87%);
 }
 
@@ -684,7 +695,7 @@ li {
   text-align: right;
 }
 
-.wave-bottom > button {
+.wave-bottom > a > button {
   justify-self: end;
   margin: 0;
 }
@@ -1091,8 +1102,8 @@ form > button:hover {
     font-size: 12px;
   }
 
-  .wave-top > button,
-  .wave-bottom > button {
+  .wave-top > a > button,
+  .wave-bottom > a > button {
     font-size: 20px;
     font-weight: 400;
     padding: 8px 0;
@@ -1162,7 +1173,7 @@ form > button:hover {
 
   .first-symbol::before,
   .second-symbol::before {
-    vertical-align:middle;
+    vertical-align: middle;
   }
 
   .header > h1 > a {
@@ -1256,8 +1267,18 @@ form > button:hover {
     margin-top: 20px;
   }
 
-  .contact-content > form > h4 {
-    font-size: 1rem;
+  .contact-text > * {
+    font-size: 12px;
+  }
+
+  .field > input,
+  .field > textarea {
+    margin-bottom: 7px;
+  }
+
+  .field  > label {
+    font-size: 15px;
+    opacity: 0.8;
   }
 
   .card > div > h3 {
@@ -1281,7 +1302,7 @@ form > button:hover {
 
 @media (max-width: 600px) {
   .header {
-    padding:  5px;
+    padding: 5px;
     gap: 5px;
   }
 
@@ -1335,8 +1356,8 @@ form > button:hover {
     max-height: 267px;
   }
 
-  .wave-top > button,
-  .wave-bottom > button {
+  .wave-top > a > button,
+  .wave-bottom > a > button {
     width: 150px;
     height: 30px;
     padding: 6px 0;
@@ -1366,7 +1387,7 @@ form > button:hover {
   }
 
   .attributions > h5,
-  .attributions> h5 > a {
+  .attributions > h5 > a {
     font-size: 10px;
   }
 }
@@ -1374,7 +1395,6 @@ form > button:hover {
 @media (max-width: 500px) {
   .header > h1 > a {
     font-size: 18px;
-
   }
 
   .first-symbol::before,
@@ -1412,6 +1432,10 @@ form > button:hover {
     gap: 15px;
   }
 
+  .reasons-why > .animate-slide {
+    padding-left: 3px;
+  }
+
   .wave-top {
     margin: 0 0 100px 0;
   }
@@ -1427,17 +1451,11 @@ form > button:hover {
     max-height: 200px;
   }
 
-  .wave-top > button,
-  .wave-bottom > button {
+  .wave-top > a > button,
+  .wave-bottom > a > button {
     width: 300px;
-    height: auto;
-  }
-
-  .wave-top > button > a,
-  .wave-bottom > button > a {
     font-size: 12px;
-    margin: 0;
-    padding: 0;
+    height: auto;
   }
 }
 

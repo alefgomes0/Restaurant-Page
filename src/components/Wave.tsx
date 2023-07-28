@@ -22,9 +22,10 @@ export const Wave = () => {
             alt="a dinner table setting with the sea on the background"
             className="event-image"
           />
-          <button>
-            <Link to="/contact">CONTACT US</Link>
-          </button>
+
+          <Link to="/contact">
+            <button>CONTACT US</button>
+          </Link>
         </div>
         <div className="wave-bottom">
           <h3>OUR MENU HAS AN IDEAL FIT FOR EVERYONE</h3>
@@ -33,9 +34,10 @@ export const Wave = () => {
             alt="a dinner table setting with the sea on the background"
             className="event-image2"
           />
-          <button>
-            <Link to="/menu">CHECK OUR MENU</Link>
-          </button>
+
+          <Link to="/menu">
+            <button>CHECK OUR MENU</button>
+          </Link>
         </div>
       </div>
     </section>
