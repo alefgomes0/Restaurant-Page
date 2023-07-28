@@ -1,10 +1,10 @@
+import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
-import { HomeContent } from "./components/HomeContent";
-import { ContactContent } from "./components/ContactContent";
-import { NoMatch } from "./components/NoMatch";
-import "./App.css";
+import { HomeContent } from "./Pages/Home/HomeContent";
+import { ContactContent } from "./Pages/Contact/ContactContent";
+import { NoMatch } from "./Pages/NoMatch/NoMatch";
 import { Footer } from "./components/Footer";
 
 
