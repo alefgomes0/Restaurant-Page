@@ -48,7 +48,7 @@ export const DropDown = () => {
             <button type="button">Contact</button>
           </Link>
           <div className="separator"></div>
-          <div className="sm-icons">
+          <div className={`sm-icons ${isVisible ? "" : "testando"}`}>
             <img
               src="https://icongr.am/entypo/instagram-with-circle.svg?size=18&color=#393939"
               alt="instagram icon"
