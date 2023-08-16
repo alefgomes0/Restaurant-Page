@@ -3,7 +3,7 @@ export const Footer = () => {
     <footer className="footer">
       <div className="name-gh">
         <h4>Alexandre Figueiredo Gomes</h4>
-        <a href="https://github.com/alefgomes0">
+        <a rel="noreferrer" href="https://github.com/alefgomes0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

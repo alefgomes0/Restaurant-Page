@@ -23,45 +23,47 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="header">
-      {isDesktop ? (
-        <>
-          <h1 onClick={scrollToTop}>
-            <span className="first-symbol"></span>
-            <Link to="/">SeaYa Restaurant</Link>
-            <span className="second-symbol"></span>
-          </h1>
-          <ul>
-            <li className="tab">
-              <NavLink to="/" onClick={scrollToTop}>
-                Home
-              </NavLink>
-            </li>
-            <li className="tab">
-              <NavLink to="/menu" onClick={scrollToTop}>
-                Menu
-              </NavLink>
-            </li>
-            <li className="tab">
-              <NavLink to="/contact" onClick={scrollToTop}>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-          <SocialMediaIcons />
-          <button>Reservation</button>
-        </>
-      ) : (
-        <>
-          <DropDown />
-          <h1 onClick={scrollToTop}>
-            <span className="first-symbol"></span>{" "}
-            <Link to="/">SeaYa Restaurant</Link>
-            <span className="second-symbol"></span>
-          </h1>
-          <button>Reservation</button>
-        </>
-      )}
-    </div>
+    <header>
+      <div className="header">
+        {isDesktop ? (
+          <>
+            <h1 onClick={scrollToTop}>
+              <span className="first-symbol"></span>
+              <Link to="/">SeaYa Restaurant</Link>
+              <span className="second-symbol"></span>
+            </h1>
+            <ul>
+              <li className="tab">
+                <NavLink to="/" onClick={scrollToTop}>
+                  Home
+                </NavLink>
+              </li>
+              <li className="tab">
+                <NavLink to="/menu" onClick={scrollToTop}>
+                  Menu
+                </NavLink>
+              </li>
+              <li className="tab">
+                <NavLink to="/contact" onClick={scrollToTop}>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+            <SocialMediaIcons />
+            <button>Reservation</button>
+          </>
+        ) : (
+          <>
+            <DropDown />
+            <h1 onClick={scrollToTop}>
+              <span className="first-symbol"></span>{" "}
+              <Link to="/">SeaYa Restaurant</Link>
+              <span className="second-symbol"></span>
+            </h1>
+            <button>Reservation</button>
+          </>
+        )}
+      </div>
+    </header>
   );
 };
