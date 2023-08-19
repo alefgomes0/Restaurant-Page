@@ -3,7 +3,11 @@ export const ImgAttr = () => {
     <footer className="img-attr">
       <div className="name-gh">
         <h4>Alexandre Figueiredo Gomes</h4>
-        <a href="https://github.com/alefgomes0">
+        <a
+          href="https://github.com/alefgomes0"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -21,31 +25,59 @@ export const ImgAttr = () => {
         <h5>
           Image attributions | Carousel (in order of appearence) - Ricardo Honda
           at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/Xd5F5tEN_0w">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/Xd5F5tEN_0w"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash
           </a>
           . Khaled Mohamed at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/jHqxMeDRsSY">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/jHqxMeDRsSY"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash.
           </a>
           Elena Mozhvilo at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/HnJJsRihlQw">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/HnJJsRihlQw"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash.
           </a>
           Farhad Ibrahimzade at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/ug4TZGjzFeY">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/ug4TZGjzFeY"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash.
           </a>
           Ricardo Jimenez at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/Kzft6vrwRoM">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/Kzft6vrwRoM"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash
           </a>
           "Wave" images (in order of appearence) - Mark Chan at{" "}
-          <a href="https://unsplash.com/pt-br/fotografias/fjHmkXoaPxk">
+          <a
+            href="https://unsplash.com/pt-br/fotografias/fjHmkXoaPxk"
+            target="_blank"
+            rel="noreferrer"
+          >
             Unplash.{" "}
           </a>
           Solda at{" "}
-          <a href="https://pixabay.com/pt/photos/sushi-apresenta%C3%A7%C3%A3o-do-chef-alimentos-596930/">
+          <a
+            href="https://pixabay.com/pt/photos/sushi-apresenta%C3%A7%C3%A3o-do-chef-alimentos-596930/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Pixabay.
           </a>
         </h5>
