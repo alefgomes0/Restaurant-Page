@@ -388,7 +388,7 @@ div > .testando {
 .left-arrow,
 .right-arrow {
   position: absolute;
-  align-self: center;
+  bottom: 50%;
   font-size: 80px;
   color: #fff;
   opacity: 0.7;
